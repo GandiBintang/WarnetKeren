@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>warnetkeren</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>800</width>
+     <height>500</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>800</width>
+     <height>500</height>
+    </size>
+   </property>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>800</width>
+      <height>500</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QStackedWidget #Login {
+border-image:url(:/images/realbackground2.png);
+}
+
+QStackedWidget #Register {
+border-image:url(:/images/registerbackground.png);
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Login">
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>40</y>
+        <width>691</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QWidget" name="LeftSide" native="true"/>
+       </item>
+       <item>
+        <widget class="QWidget" name="RightSide" native="true">
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>60</y>
+            <width>141</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Fredoka</family>
+            <pointsize>22</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>ArrowCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#label {
+font-weight: bold;
+color: #046CBB;
+font-family: &quot;Fredoka&quot;;
+}</string>
+          </property>
+          <property name="text">
+           <string>Sign in</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="EmailLabel">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>140</y>
+            <width>131</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#EmailLabel {
+font-family: &quot;Fredoka&quot;;
+font-size: 14px;
+font-weight: bold;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Email Address</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="EmailEdit">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>170</y>
+            <width>251</width>
+            <height>26</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#EmailEdit {
+border-radius: 6px;
+
+}</string>
+          </property>
+          <property name="placeholderText">
+           <string>Enter your email here</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="PasswordLabel">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>210</y>
+            <width>131</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#PasswordLabel {
+font-family: &quot;Fredoka&quot;;
+font-size: 14px;
+font-weight: bold;
+}</string>
+          </property>
+          <property name="text">
+           <string>Password</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="PasswordEdit">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>240</y>
+            <width>251</width>
+            <height>26</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#PasswordEdit {
+border-radius: 6px;
+
+
+}</string>
+          </property>
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>Enter your password here</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="verticalLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>270</y>
+            <width>251</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetDefaultConstraint</enum>
+           </property>
+           <property name="leftMargin">
+            <number>30</number>
+           </property>
+           <property name="topMargin">
+            <number>15</number>
+           </property>
+           <property name="rightMargin">
+            <number>30</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="LoginButton">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>90</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>500</width>
+               <height>500</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#LoginButton {
+border-image:url(:/images/signinbutton3.png);
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="RegisterButton">
+             <property name="styleSheet">
+              <string notr="true">#RegisterButton {
+font-weight: bold;
+color: #046CBB;
+font-family: &quot;Fredoka&quot;;
+}</string>
+             </property>
+             <property name="text">
+              <string>Register</string>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="widget" native="true">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>80</y>
+            <width>251</width>
+            <height>241</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#widget {
+border-image:url(:/images/loginsucess.png);
+border-shadow: 10px;
+}</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Register">
+     <property name="styleSheet">
+      <string notr="true">#PasswordLabel_2, #UsernameLabel {
+font-family: &quot;Fredoka&quot;;
+font-size: 14px;
+font-weight: bold;
+}
+
+#UsernameInput, #PasswordInput, #EmailInput, #PhoneInput {
+border-radius: 6px;
+
+}
+</string>
+     </property>
+     <widget class="QPushButton" name="BackButton">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>40</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#BackButton {
+border-image:url(:/images/backbutton1.png);
+}
+
+#BackButton:pressed {
+border-style:solid;
+border-width:1px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="RegRegButton">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>390</y>
+        <width>161</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#RegRegButton {
+border-image:url(:/images/registerbutton1.png);
+}
+
+#RegRegButton:hover{
+border-style:solid;
+border-width:1px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>60</y>
+        <width>221</width>
+        <height>321</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="UsernameLabel">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Username</string>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <property name="indent">
+            <number>2</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="UsernameInput">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="placeholderText">
+            <string>Enter Your Username</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="PasswordLabel_2">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Password</string>
+           </property>
+           <property name="indent">
+            <number>2</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="PasswordInput">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+           <property name="placeholderText">
+            <string>Enter Your Password</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLabel" name="EmailLabel_2">
+           <property name="styleSheet">
+            <string notr="true">#EmailLabel_2 {
+font-family: &quot;Fredoka&quot;;
+font-size: 14px;
+font-weight: bold;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>E-mail</string>
+           </property>
+           <property name="indent">
+            <number>2</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="EmailInput">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="placeholderText">
+            <string>Enter Your Email</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QLabel" name="PhoneLabel">
+           <property name="styleSheet">
+            <string notr="true">#PhoneLabel {
+font-family: &quot;Fredoka&quot;;
+font-size: 14px;
+font-weight: bold;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Phone Number</string>
+           </property>
+           <property name="indent">
+            <number>2</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="PhoneInput">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="placeholderText">
+            <string>Enter Your Phone Number</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
